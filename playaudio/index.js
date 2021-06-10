@@ -11,10 +11,21 @@ document.body.addEventListener('keydown',function(e){
   //  console.log(typeof());
     if(keyprecode in obj){
     boxClass[Number(obj[keyprecode])].classList.add('press');
-    var durationOfAudio=audio[Number(obj[keyprecode])].duration;
     audio[Number(obj[keyprecode])].play();
     setTimeout(function(){ boxClass[Number(obj[keyprecode])].classList.remove('press'); }, 1500);
     }
     
 })
 
+
+document.body.addEventListener('click',function(e){
+  var clicked=e.target.dataset['number'];
+
+//  console.log(typeof());
+if(clicked>=0 && clicked<=8){
+  boxClass[clicked].classList.add('press');
+  audio[clicked].play();
+  setTimeout(function(){ boxClass[clicked].classList.remove('press'); }, 1500);
+}
+  
+})
