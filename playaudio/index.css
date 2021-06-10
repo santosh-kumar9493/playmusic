@@ -1,0 +1,48 @@
+body{
+    background-color: skyblue;
+}
+.container{
+   display: flex;
+   justify-content:center;
+   height: 550px;      
+   align-items: center;
+}
+.box{
+    max-height: 75px;
+    width: 75px;
+    text-align: center;
+    color: white;
+    padding: 1%;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 1%;
+    display: inline-block;
+    
+}
+.box p:first-of-type{
+    color: white;
+    font-weight: 600;
+}
+.box p{
+    
+    color: rgba(223, 248, 0, 0.822);
+}
+
+.press{
+    border: 2px solid black;
+    transform: translate(2);
+    box-shadow: 3px 3px 6px yellow;
+}
+
+@media only screen and (max-width:900px){
+    .container{
+        display: flex;
+        height: 100vh;
+        flex-wrap: wrap;
+        align-content:center;
+    }
+    .box{
+        margin: 5px;
+        align-self: center;
+    }
+        
+}
